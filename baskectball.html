@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <style>
+
+      @font-face {
+            font-family:digital;
+            src: url("digital-7/digital-7.ttf");
+          }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        
+       
+
+        .container{
+            width: 25%;
+            height:32vh;
+            background:#e3f9ff;
+            display: flex;
+            border-radius: 10px;
+            background-color: rgb(25,37,77);
+            margin: auto;
+            border: 2px solid white;
+            margin-top:14%;
+            box-shadow:-8px -8px 15px rgba(19, 1, 43, 0.2),5px  5px 15px rgba(78, 12, 153, 0.4)
+           
+        }
+
+        .Home{
+          color: white;
+          padding: 20px; 
+          margin-left: 5%;
+          
+        }
+
+       .display_box {
+        padding: 20%;
+        text-align: center;
+        background-color: black;
+        color:rgb(249,79,109);
+        margin-top: 10%;
+        border-radius: 12px;
+        font-size: 30px;
+        font-family: digital;
+       }
+       
+      .btn{
+        margin-top: 10%;
+        margin-left: 5%;
+      }
+
+      .btn button{
+             padding:5% ;
+             box-shadow:-8px -8px 15px rgba(255,255,255,0.1) ,5px  5px 15px rgba(0,0,0,0.2);
+             cursor: pointer;
+             font-family: digital;
+      }
+
+   .rest{
+
+    margin-left: 103%;
+    padding: 2% 10%;
+    color:rgb(249,79,109);
+    font-family: digital;
+    border-radius: 10px;
+    cursor: pointer;
+   }
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="Home">
+        <h1>HOME</h1>
+        <div class="display_box" id="dis-box1"><span ></span></div>
+        <div class="btn">
+        <button onclick="increment()">+1</button>
+        <button onclick="incrementby2()">+2</button>
+        <button onclick="incrementby3()">+3</button>
+        <!-- <button onclick="document.getElementById('dis-box1').innerHTML = 0">0</button> -->
+        </div>
+        <button class="rest" onclick="rest1();rest2()" >Rest</button>
+   </div>
+   <div class="Home">
+    <h1>GUEST</h1>
+    <div class="display_box" id="dis-box2"><span class="span1">5</span></div>
+    <div class="btn">
+    <button onclick="increment1()" >+1</button>
+    <button onclick="increment2()">+2</button>
+    <button onclick="increment3()">+3</button>
+    </div>
+</div>
+</div>
+<script>
+
+        let x = 12;
+       let y = 5;
+       let z = 12;
+       let d = 5;
+document.getElementById('dis-box1').innerHTML = x;
+document.getElementById('dis-box2').innerHTML = y;
+
+function increment() {
+  
+    document.getElementById('dis-box1').innerHTML = ++x;
+}
+
+function incrementby2() {
+  document.getElementById('dis-box1').innerHTML = x+=2;
+}
+
+function incrementby3() {
+  document.getElementById('dis-box1').innerHTML = x+=3;
+}
+
+
+
+function increment1() {
+  
+  document.getElementById('dis-box2').innerHTML = ++y;
+}
+
+function increment2() {
+document.getElementById('dis-box2').innerHTML = y+=2;
+}
+
+function increment3() {
+document.getElementById('dis-box2').innerHTML = y+=3;
+}
+
+function rest1() {
+document.getElementById('dis-box1').innerHTML = z;
+}
+
+function rest2() {
+document.getElementById('dis-box2').innerHTML = d;
+}
+
+
+    </script>
+</body>
+</html>
